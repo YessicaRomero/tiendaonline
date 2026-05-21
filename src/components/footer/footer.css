@@ -1,21 +1,27 @@
 .footer{
     display: flex;
-
+flex-direction: column;
 font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 font-size: 13px;
-text-align: center;
+align-items: center;
+position: relative;
 margin: 8px 0;
 padding: 10px;
 width: 100%;
 justify-content: space-between;
 height: 160px;
-text-align: end;
 
-overflow: hidden; 
+box-sizing: border-box;
+
 
 }
 .h3{
-   
-    font-size: 15px;
-
+   position: absolute;
+   margin: 0%;
+ padding-top: 5px;
+}
+img{
+    align-items: center;
+    width: 25px;
+    
 }

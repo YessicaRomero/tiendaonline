@@ -12,6 +12,9 @@ return(
         {products.map((product) => (
            <Link to={`/product/${product.id}`} key={product.id} >
             <Item {...product} />
+            <button onClick={(e) => {
+                e.preventDefault();
+                agregarAlCarrito(product)}}>Agregar al carrito</button>
             </Link>
         
        ) )}
