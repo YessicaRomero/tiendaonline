@@ -1,6 +1,8 @@
-
+import { ItemDetail } from "../ItemDetail/ItemDetail";
 import { useEffect, useState } from "react";
-import { data, useParams } from "react-router-dom"
+import {  useParams } from "react-router-dom";
+
+
 
 export const ItemDetailContainer = () =>{
 const {id} = useParams();
@@ -30,7 +32,7 @@ const [loading, setLoading] = useState(true);
     <section>
             <h1>Detalle del producto</h1>
         <div>
-            <ItemDetail item={ItemDetail}></ItemDetail>
+            <ItemDetail item={ ItemDetail}> </ItemDetail>
         </div>
     </section>
 

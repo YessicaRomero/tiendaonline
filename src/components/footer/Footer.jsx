@@ -10,6 +10,10 @@ export const Footer = () =>{
               <img alt="logoFacebook" src={"img/facebook.png"} />
               
             </Link>
+            <Link to="https://www.instagram.com/" target="_blank">
+              <img alt="logoInstagram" src={"img/instagram.png"} />
+              
+            </Link>
             <h3>web diseñada por YesDev</h3>
             </footer>
 
