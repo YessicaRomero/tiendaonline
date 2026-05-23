@@ -1,13 +1,13 @@
-import { ItemDetail } from "../ItemDetail/ItemDetail";
 import { useEffect, useState } from "react";
 import {  useParams } from "react-router-dom";
+import { ItemDetail } from "../ItemDetail/ItemDetail";
 
 
 
 export const ItemDetailContainer = () =>{
 const {id} = useParams();
 
-const [ItemDetail, setItemDetail] = useState(null);
+const [itemDetail, setItemDetail] = useState(null);
 const [loading, setLoading] = useState(true);
 
 
@@ -26,17 +26,15 @@ const [loading, setLoading] = useState(true);
 
     }, []);
     if(loading) return <p>El producto se esta cargando....</p>
-    if (!ItemDetail) return <p>El producto seleccionado no se encuentra</p>
+    if (!itemDetail) return <p>El producto seleccionado no se encuentra</p>
 
     return(
     <section>
             <h1>Detalle del producto</h1>
         <div>
-            <ItemDetail item={ ItemDetail}> </ItemDetail>
-        </div>
-    </section>
-
+            <ItemDetail item={itemDetail }/>
+    
+</div></section>
     )} 
 
     
-

@@ -1,3 +1,4 @@
+
 import { createContext, useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -40,7 +41,29 @@ const [cart, setCart] =  useState([]);
     };
 
 
-    const getCartTotal = () =>{
-        return 
+    const getTotalItems = () =>{
+        return cart.length
     }
+    //cuenta el total a pagar
+    const getCartTotal  = () =>{
+            return cart.reduce((acc, element)=> acc + element.price, 0);
+    }
+    const checkout = () =>{
+        alert('Su compra se realizo con exito')
+        clearCart()
+        navigate("/")
+    }
+
+    const value = {
+        cart,
+        getCartTotal,
+        getTotalItems,
+        clearCart, 
+        addItem,
+        removeItem,
+        checkout
+    }
+    
+    return <CardContext.Provider value={value}>{children}</CardContext.Provider>
+
 }
