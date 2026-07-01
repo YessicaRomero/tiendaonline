@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom"
-import './nav.css'
-import { UseCart } from "../../context/CardContext"
+import { Link } from "react-router-dom";
+import { UseCart } from "../../context/CardContext";
+import './nav.css';
 export const Nav  = () =>{
 const {getTotalItems} = UseCart(); 
 const totalItems = getTotalItems();

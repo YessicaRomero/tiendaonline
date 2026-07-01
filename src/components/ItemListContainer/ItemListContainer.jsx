@@ -2,18 +2,21 @@
 import { useEffect, useState } from "react";
 import { ItemList } from '../itemList/itemList';
 import './itemCont.css'
+import { collection, doc, getDocs } from "firebase/firestore";
+import { db } from "../../firebase/config";
 
-export const ItemListContainer =() =>{
+export const ItemListContainer = () =>{
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
     
     useEffect(() => {
-        fetch("/data/products.json")
-        .then((res) => res.json())
-        .then((data) => setProducts(data))
-        .catch((err) => console.log(err))
-        .finally(() => {
-            setLoading(false)
+       const productsDB = collection(db, "products")
+        getDocs(productsDB).then((resp) => {
+            setProducts(
+                resp.docs.map((doc) => {
+                    return {...doc.data(), id: doc.id}
+                })
+            )
         } )
 
     }, []);

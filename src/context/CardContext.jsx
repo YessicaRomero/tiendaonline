@@ -27,7 +27,12 @@ const [cart, setCart] =  useState([]);
             return
         }
         setCart([...cart, item]);
-        alert('Su producto se agrego al carrito 🛍️')
+        alert('Su producto se agrego al carrito 🛍️');
+
+        
+
+
+
     }
 
 
@@ -44,7 +49,7 @@ const [cart, setCart] =  useState([]);
     const getTotalItems = () =>{
         return cart.length
     }
-    //cuenta el total a pagar
+    //cuento el total a pagar
     const getCartTotal  = () =>{
             return cart.reduce((acc, element)=> acc + element.price, 0);
     }
