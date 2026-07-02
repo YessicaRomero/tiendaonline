@@ -33,18 +33,19 @@ import {onAuthStateChanged ,  signInWithEmailAndPassword,
       return unsubscribe;
     }, []);
   
-    const login = (email, password) => {
-      return signInWithEmailAndPassword(auth, email, password);
-    };
+   
   
     const logout = async () => {
       try {
         await signOut(auth);
       } catch (error) {
-        console.error("Error al cerrar sesión:", error);
+        console.error("Hubo un error al cerrar sesión:", error);
       }
     };
-  
+
+   const login = (email, password) => {
+      return signInWithEmailAndPassword(auth, email, password);
+    };
     return (
       <AuthContext.Provider value={{ user, loading, login, logout }}>
         {children}
