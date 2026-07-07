@@ -24,7 +24,7 @@ export const Dashboard = () => {
         <h3>Acciones rápidas</h3>
 
         <div className="actions-grid">
-          <Link to="/admin/products/new" className="action-card">
+          <Link to="/admi/products/new" className="action-card">
             ➕ Cargar un producto
           </Link>
 

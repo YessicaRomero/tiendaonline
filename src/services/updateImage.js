@@ -19,7 +19,7 @@ export const uploadImage = async (file) => {
 
     return data.data.url;
   } catch (error) {
-    console.error("ImgBB error:", error);
+    console.error("Img error:", error);
     throw error;
   }
 };

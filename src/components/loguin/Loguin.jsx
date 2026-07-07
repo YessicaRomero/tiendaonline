@@ -22,7 +22,7 @@ export const Login = () => {
 try {
     await login(formData.email, formData.password);
       console.log("Registro Exitoso");
-      navigate("/admin", { replace: true });
+      navigate("/admi", { replace: true });
 
 
     } catch (error) {
