@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 
 import { useParams } from "react-router-dom";
 import { getByCategory } from "../../services/productService";
-import { ItemList } from "../itemListTemp/itemList"; 
+import { ItemList } from "../itemList/itemList"; 
 
 
 
