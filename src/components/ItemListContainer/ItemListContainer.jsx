@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import ItemList from "../itemList/ItemList";
+import {ItemList} from "../itemList/ItemList";
 
 import { useParams } from "react-router-dom";
 import { getByCategory } from "../../services/productService";
