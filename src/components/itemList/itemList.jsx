@@ -1,6 +1,11 @@
 import { Link } from "react-router-dom"
 import { Item } from "../item/Item"
 import './itemlist.css'
+
+
+
+
+
 export const ItemList = ({ products }) =>{
 
 if(!products.length){

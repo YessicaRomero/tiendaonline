@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
-import { ItemList } from "../ItemList/ItemList";
+
 
 import { useParams } from "react-router-dom";
 import { getByCategory } from "../../services/productService";
+import { ItemList } from "../ItemList/ItemList";
 
 export const ItemListContainer = () => {
   //tomamos "category" del useParams para poder filtrar
@@ -27,7 +28,8 @@ export const ItemListContainer = () => {
  console.log(products)
   return (
     <section>
-      <ItemList products={products} />
+     <ItemList products={products} ></ItemList>
+     
     </section>
   );
 };
