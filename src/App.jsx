@@ -9,7 +9,7 @@ import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetail
 import { ItemListContainer } from './components/ItemListContainer/ItemListContainer'
 import { Login } from './components/loguin/Loguin'
 import { ProtectedRoute } from './components/protectedRoute/protectedRoute'
-import { AdminLayout } from './layouts/admiLayout'
+import {AdmiLayout} from  './layouts/AdmiLayout'
 import { PublicLayout } from './layouts/PublicLayout'
 
 function App() {
@@ -25,7 +25,7 @@ function App() {
     <Route path='/product/:id' element={<ItemDetailContainer />} ></Route>
     <Route path='/cart' element={ <Carts />}></Route>
 </Route>
-    <Route path='/admi' element={<ProtectedRoute > <AdminLayout />   </ProtectedRoute>}>
+    <Route path='/admi' element={<ProtectedRoute > <AdmiLayout />  </ProtectedRoute>}>
     <Route path='/admi/loguin' element={<Login />}></Route>
      
     

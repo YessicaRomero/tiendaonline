@@ -1,9 +1,10 @@
 import { Outlet } from "react-router-dom";
 
-export const AdminLayout = () => {
+export const AdmiLayout = () => {
   return (
-    <main>
+   <>
+   <p>Perfil del Administrador </p>
       <Outlet />
-    </main>
+</>
   );
 };
