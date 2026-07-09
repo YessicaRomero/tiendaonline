@@ -6,6 +6,7 @@ import { getByCategory } from "../../services/productService";
 import { ItemList } from "../ItemList/ItemList";
 
 
+
 export const ItemListContainer = () => {
   //tomamos "category" del useParams para poder filtrar
   const { category } = useParams();
@@ -29,7 +30,7 @@ export const ItemListContainer = () => {
  console.log(products)
   return (
     <section>
-     <ItemList products={products} ></ItemList>
+   <ItemList products={products}  />
      
     </section>
   );
