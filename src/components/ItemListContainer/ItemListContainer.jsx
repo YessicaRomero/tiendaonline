@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 import { getByCategory } from "../../services/productService";
 import { ItemList } from "../ItemList/ItemList";
 
+
 export const ItemListContainer = () => {
   //tomamos "category" del useParams para poder filtrar
   const { category } = useParams();
