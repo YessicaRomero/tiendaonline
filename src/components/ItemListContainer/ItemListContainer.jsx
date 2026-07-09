@@ -1,31 +1,33 @@
- 
 import { useEffect, useState } from "react";
-import { ItemList } from '../itemList/itemList';
-import './itemCont.css'
-import { collection, doc, getDocs } from "firebase/firestore";
-import { db } from "../../firebase/config";
+import { ItemList } from "../ItemList/ItemList";
 
-export const ItemListContainer = () =>{
-    const [products, setProducts] = useState([]);
-    const [loading, setLoading] = useState(true);
-    
-    useEffect(() => {
-       const productsDB = collection(db, "products")
-        getDocs(productsDB).then((resp) => {
-            setProducts(
-                resp.docs.map((doc) => {
-                    return {...doc.data(), id: doc.id}
-                })
-            )
-        } )
+import { useParams } from "react-router-dom";
+import { getByCategory } from "../../services/productService";
 
-    }, []);
-   
-    if(loading) return <p>cargando productos</p>
-    return(
-        <div className="cont">
-        <section >
-            <ItemList products={products} />
-        </section>
-  </div>  )
-}
+export const ItemListContainer = () => {
+  //tomamos "category" del useParams para poder filtrar
+  const { category } = useParams();
+
+  const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setLoading(true);
+
+    //Usanmos la funcion con 2 uso: trae todo o filtra si category existe
+    getByCategory(category)
+      .then((data) => setProducts(data))
+      .catch((err) => console.log("Hubo un error:", err))
+      .finally(() => setLoading(false));
+  }, [category]);
+  //👉No olvidar agregar "category" como variable de dependencias para que renderice nuevamente el container si cambia category
+  //En caso de usar el filtro por categorias
+
+  if (loading) return <p>Cargando...</p>;
+ console.log(products)
+  return (
+    <section>
+      <ItemList products={products} />
+    </section>
+  );
+};

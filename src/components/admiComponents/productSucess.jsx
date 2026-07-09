@@ -12,7 +12,7 @@ export const ProductSuccess = () => {
       <p>ID de producto: {id}</p>
       <p>Agrega un nuevo producto</p>
 
-      <Link className="btn bg-primary primary" to="/admin" replace>
+      <Link className="btn bg-primary primary" to="/admi" replace>
         Agregar otro producto
       </Link>
     </section>

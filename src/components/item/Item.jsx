@@ -3,10 +3,10 @@ export const Item = ({name, description, price, image, children}) => {
 
     return(
         <article className="card">
-                <img src={image} alt={"foto de producto"} />
-                <h3>{name}</h3>
-                <p>{description}</p>
-                <p>${price}</p>
+                 {image ?<img src={image} alt={"foto de producto"}/> : <p>Sin imagen</p>}
+                <h3>{name || <p>Sin nombre</p>}</h3>
+                <p>{description || <p>Sin description</p>}</p>
+                <p>${price || <p>Sin precio</p>}</p>
                 {children}
         </article>
     )

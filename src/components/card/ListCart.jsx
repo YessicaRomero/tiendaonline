@@ -7,9 +7,9 @@ export const ListCart = () =>{
 
     return(
         <div>
-            {cart.map((element)=> {
+            {cart.map((element)=> (
                 <CartItem key={element.id} item={element} />
-            }
+            )
          
        ) }
    </div> ) 

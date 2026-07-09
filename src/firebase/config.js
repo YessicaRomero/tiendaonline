@@ -1,23 +1,22 @@
-import { getAnalytics } from "firebase/analytics";
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-apiKey: "AISyCelxxNBGFzW9Rb4yCdLjBMs2MDMVaXyalYU",
-authDomain: "react-c9743.firebaseapp.com",
-projectId: "react-c9743",
-storageBucket: "react-c9743.firebasestorage.app",
-messagingSenderId: "933655766258",
-appId: "1:933655766258:web:e18886a2cfeb7de0913ca7",
-measurementId: "G-9PRRX78S4R"
-};
+    apiKey: "AIzaSyBlVOvN8vK9F5ILBFL7IfsMlvNcwtzkSZE",
+    authDomain: "ecommerce-dulcehogar.firebaseapp.com",
+    projectId: "ecommerce-dulcehogar",
+    storageBucket: "ecommerce-dulcehogar.appspot.com",
+    messagingSenderId: "119214747831",
+    appId: "1:119214747831:web:a97000ae092d7f83815d32",
+    measurementId: "G-8J19Q7WDB7"
+  };
 const app = initializeApp(firebaseConfig);
-export const db = getFirestore(app)
+ const db = getFirestore(app)
 
-export const auth = getAuth(app);
+ const auth = getAuth(app);
 
-
+export {db, auth}
 
 
 
