@@ -6,7 +6,7 @@ export const ProtectedRoute = ({ children }) => {
 
   if (loading) return <p>Cargando...</p>;
 
-  if (!user) return <Navigate to="/admi/login" />;
+  if (!user) return <Navigate to="/admi/loguin" replace />;
 
   return children;
 };

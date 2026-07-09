@@ -25,11 +25,11 @@ function App() {
     <Route path='/product/:id' element={<ItemDetailContainer />} ></Route>
     <Route path='/cart' element={ <Carts />}></Route>
 </Route>
+
+
+<Route path='/admi/loguin' element={<Login />}></Route>
     <Route path='/admi' element={<ProtectedRoute > <AdmiLayout />  </ProtectedRoute>}>
-    <Route path='/admi/loguin' element={<Login />}></Route>
-     
-    
-  <Route index element={<Dashboard />} />
+    <Route index element={<Dashboard />} />
     <Route path="dashboard" element={<Dashboard />} />
     <Route path="products/new" element={<ProductFormContainer />} />
     <Route path="products/success/:id" element={<ProductSuccess />} />
