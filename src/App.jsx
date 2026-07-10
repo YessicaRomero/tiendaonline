@@ -16,8 +16,8 @@ function App() {
   
 
   return (
-    <>
-    
+    < >
+    <div  className=' app-background text-decoration-none'>
      <Routes>
       <Route  element={<PublicLayout />}>
     <Route path='/' element={<ItemListContainer />}   /> 
@@ -37,7 +37,7 @@ function App() {
 
     </Routes>
   
-
+</div>
    </>
   )
 }

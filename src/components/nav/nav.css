@@ -1,5 +1,5 @@
 .nav-list {
-    list-style: none;
+
     display: flex;
     justify-content: center;
 }
@@ -10,5 +10,5 @@
 }
 .nav-list {
     text-decoration: none;
-    color: inherit;
+
 }

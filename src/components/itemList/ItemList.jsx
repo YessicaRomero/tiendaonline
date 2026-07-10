@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import { Item } from "../item/Item"
-import './itemlist.css'
+import "./itemList.css"
 
 
 
@@ -13,9 +13,9 @@ if(!products.length){
 
 }
 return(
-    <div className="itemlistcontainer"> 
+    <div className="itemlistcontainer "> 
         {products.map((product) => (
-           <Link to={`/product/${product.id}`} key={product.id} >
+           <Link  className="text-decoration-none" to={`/product/${product.id}`} key={product.id} >
             <Item {...product} />
             </Link>
         

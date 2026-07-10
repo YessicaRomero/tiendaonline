@@ -10,18 +10,17 @@ padding: 10px;
 width: 100%;
 justify-content: space-between;
 height: 160px;
-
+background-color: black;
 box-sizing: border-box;
 
 
 }
-.h3{
-   position: absolute;
-   margin: 0%;
- padding-top: 5px;
-}
-img{
-    align-items: center;
-    width: 25px;
+.buton{
+    width: 3px;
     
 }
+.social-icon {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+  }

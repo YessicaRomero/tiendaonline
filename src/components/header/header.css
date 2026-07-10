@@ -12,15 +12,13 @@ header {
   align-items: center;
   font-size: 2rem;
   height: 2em;
- 
+
  color: cornsilk;
 }
 img{
-width: 80px;
-height: 65px;
+width: 90px;
+height: 75px;
 object-fit: contain;
-}
-a{
-  color: rgb(105, 94, 47);
-  text-decoration:antiquewhite ;
+ margin: 3px;
+ padding: 3px;
 }

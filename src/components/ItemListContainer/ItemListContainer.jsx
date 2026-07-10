@@ -3,12 +3,14 @@ import {ItemList} from "../itemList/ItemList";
 
 import { useParams } from "react-router-dom";
 import { getByCategory } from "../../services/productService";
+import Spiner from "../spiner/spinner";
+
 
 
 
 
 export const ItemListContainer = () => {
-  //tomamos "category" del useParams para poder filtrar
+  
   const { category } = useParams();
 
   const [products, setProducts] = useState([]);
@@ -17,20 +19,16 @@ export const ItemListContainer = () => {
   useEffect(() => {
     setLoading(true);
 
-    //Usanmos la funcion con 2 uso: trae todo o filtra si category existe
     getByCategory(category)
       .then((data) => setProducts(data))
       .catch((err) => console.log("Hubo un error:", err))
       .finally(() => setLoading(false));
   }, [category]);
-  //👉No olvidar agregar "category" como variable de dependencias para que renderice nuevamente el container si cambia category
-  //En caso de usar el filtro por categorias
 
-  if (loading) return <p>Cargando...</p>;
- console.log(products)
+  if (loading) return <Spiner />
   return (
-    <section>
-   <ItemList products={products}  />
+    <section >
+   <ItemList className="text-decoration-none" products={products}  />
      
     </section>
   );
