@@ -13,7 +13,6 @@
     "@popperjs/core": "^2.11.8",
     "bootstrap": "^5.3.8",
     "firebase": "^12.15.0",
-    "mdb-react-ui-kit": "^10.0.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-router-dom": "^7.15.0"
